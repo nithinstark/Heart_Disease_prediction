@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logoheart1.png' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="static/firstpage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="{% static 'images/heart1.png' %}" alt="heartimage">
+            <div class="footer">
+                <p>Frontend - <a href="https://github.com/nithinstark"><i class="fa fa-github"></i> A Nithin Reddy </a> 
+                <p>Backend - <a href="https://github.com/Eswarreddybora"><i class="fa fa-github"></i> B Eswar Reddy</a> 
+                
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info">
+                <h1>Heart Disease Predictor</h1>
+                <p>Welcome to our Heart Health Checker!</p>
+                <p> It uses to give you an idea about your heart's health checkup.</p>
+                <a href="{% url 'myapp:main' %}"><button class="transparent-button">Predict</button></a>
+            </div>
+        </div>
+        <div class="footer footer-mob">
+            <p>Frontend - <a href="https://github.com/nithinstark"><i class="fa fa-github"></i> A Nithin Reddy </a></p>
+            <p>Backend - <a href="https://github.com/Eswarreddybora"><i class="fa fa-github"></i> B Eswar Reddy</a></p>
+            
+        </div>
+    </div>
+</body>
+</html>

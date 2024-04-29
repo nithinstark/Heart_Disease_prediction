@@ -1,0 +1,17 @@
+step:1 C:\Users\nithi\OneDrive\Desktop\heart\project>pip install django
+
+step:2 C:\Users\nithi\OneDrive\Desktop\heart\project>pip install virtualenvwrapper-win
+
+step:3 C:\Users\nithi\OneDrive\Desktop\heart\project>mkvirtualenv mycode
+
+step:4 (mycode) C:\Users\nithi\OneDrive\Desktop\heart\project>pip install django
+
+step:5 (mycode) C:\Users\nithi\OneDrive\Desktop\heart\project>django-admin startproject myapp
+
+step:6 (mycode) C:\Users\nithi\OneDrive\Desktop\heart\project\myapp>deactivate(this operation can be done or not done it just deactivate the mkvirtualenv)
+
+step:7 C:\Users\nithi\OneDrive\Desktop\heart\project\myapp>workon mycode  (step7 is done when step6 operation is done ) 
+
+step:8 (mycode) C:\Users\nithi\OneDrive\Desktop\heart\project\myapp>python manage.py startapp myproject
+
+step:9 (mycode) C:\Users\nithi\OneDrive\Desktop\heart\project\myapp>python manage.py runserver

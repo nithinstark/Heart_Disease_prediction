@@ -1,0 +1,126 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <title>Heart Predictor </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="loader-container">
+
+        <div class="loader"></div>
+    </div>
+    <h1 id="a"></h1>
+    <div class="result" id="result-negative">
+        <h1>This person has Heart Disease</h1>
+        <i class="fa fa-frown-o"></i>
+        <a href=""><button>Try for another person</button></a>
+    </div>
+
+    <div class="result" id="result-positive">
+        <h1>This Person don't have heart disease</h1>
+        <i class="fa fa-smile-o"></i>
+        <a href=""><button>Try for another person</button></a>
+    </div>
+
+    <div class="msg">
+        <p>Please check the data you entered</p>
+    </div>
+    <div class="container">
+        <form>
+            <p>Name</p>
+            <input type="text" name="name" id="name" required> <br><br>
+
+            <p>Age</p>
+            <input type="number" name="age" id="age" required> <br><br> 
+    
+            <p>Gender</p>
+            <input type="radio" value="1" name="sex" id="male" required> 
+            <label for="male">Male</label>
+            <input type="radio" value="0" name="sex" id="female">
+            <label for="female">Female</label>
+            <br><br> 
+    
+            <p>Chest Pain Type</p>
+            <input type="radio" id="typical-angina" name="cp" value="0" required>
+            <label for="typical-angina">Typical Angina</label>
+            <input type="radio" id="atypical-angina" name="cp" value="1">
+            <label for="atypical-angina">Atypical Angina</label>
+            <input type="radio" id="non-anginal-pain" name="cp" value="2">
+            <label for="non-anginal-pain">Non Anginal Pain</label>
+            <input type="radio" id="asymptomatic" name="cp" value="3">
+            <label for="asymptomatic">Asymptomatic</label>
+            <br><br>
+    
+            <p>Resting blood pressure</p>
+            <input type="text"  name="trestbps" id="trestbps" required> <br><br> 
+    
+            <p>Serum cholestoral in mg/dl</p>
+            <input type="text" name="chol" id="chol" required> <br><br> 
+            
+    
+            <p>Fasting blood sugar > 120 mg/dl</p>
+            <input type="radio" value="1" name="fbs" id="true" required>
+            <label for="true"> True</label>
+            <input type="radio" value="0" name="fbs" id="false">
+            <label for="false">False</label> <br><br>
+    
+    
+            <p>Resting electrocardiographic results</p>
+            <input type="radio" value="0" name="restecg" id="normal" required > 
+            <label for="normal">Normal</label>
+            <input type="radio" value="1" name="restecg" id="st">
+            <label for="st">Having ST-T wave Abnormality</label>
+            <input type="radio" value="2" name="restecg" id="sh">
+            <label for="sh">Showing probable or definite left Ventricular Hypertrophy</label> <br><br>
+    
+            <p>Maximum heart rate achieved</p>
+            <input type="number" name="thalach" id="thalach" required> <br><br> 
+    
+    
+            <p> Exercise induced angina </p>
+            <input type="radio" value="1" name="exang" id="yes" required> 
+            <label for="yes">Yes</label>
+            <input type="radio" value="0" name="exang" id="no"> 
+            <label for="no">No</label> <br><br>
+    
+            <p>ST depression induced by exercise relative to rest</p>
+            <input type="text" name="oldpeak" id="oldpeak" required> <br><br>
+    
+    
+            <p>The slope of the peak exercise ST segment</p>
+            <input type="radio" value="0" name="slope" id="upsloping" required> 
+            <label for="upsloping">Upsloping</label>
+            <input type="radio" value="1" name="slope" id="flat"> 
+            <label for="flat">Flat</label>
+            <input type="radio" value="2" name="slope" id="downsloping"> 
+            <label for="downsloping">Downsloping</label> <br><br>
+    
+    
+    
+            <p> Number of major vessels (0-3)</p>
+            <input type="number" name="ca" id="ca" required> <br><br> 
+    
+    
+    
+            <p>Thal</p>
+            <input type="radio" value="1" name="thal" id="normal-thal" required> 
+            <label for="normal-thal">Normal</label>
+            <input type="radio" value="2" name="thal" id="fixed-defect"> 
+            <label for="fixed-defect">Fixed defect</label>
+            <input type="radio" value="3" name="thal" id="reversable-defect"> 
+            <label for="reversable-defect">Reversable defect</label>
+    
+            <br><br>
+    
+            <input id="submit" type="submit" value="Submit data">
+        </form>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
